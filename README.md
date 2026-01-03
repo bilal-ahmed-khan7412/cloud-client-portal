@@ -16,7 +16,13 @@ A cloud-native web application built on **AWS Free Tier** for managing small bus
 *   **Serverless**: Zero infrastructure management.
 *   **Cost Optimized**: 100% Free Tier compatible.
 
-## 🛠️ Deployment
+## �️ Security
+*   **IAM Roles**: Implements "Least Privilege" (Lambda only accesses specific DynamoDB table).
+*   **Cognito Auth**: Industry-standard identity management (passwords never hit the backend).
+*   **CORS**: API Gateway configured with CORS to prevent unauthorized browser access.
+*   **S3 Permissions**: Public access limited strictly to static assets.
+
+## �🛠️ Deployment
 This project uses **GitHub Actions** for continuous deployment.
 Pushing to `master` automatically syncs the `frontend/` folder to the configured S3 bucket.
 
