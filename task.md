@@ -53,6 +53,6 @@
 ## Phase 6 (New): Automate Deployment (CI/CD)
 - [x] Initialize Local Git Repo
 - [x] Create GitHub Actions Workflow
-- [ ] Create GitHub Repository
-- [ ] Push Code to GitHub
-- [ ] Configure GitHub Secrets (AWS Keys)
+- [x] Create GitHub Repository
+- [x] Push Code to GitHub
+- [/] Configure GitHub Secrets (AWS Keys)
