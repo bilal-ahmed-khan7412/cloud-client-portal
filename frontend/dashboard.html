@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Client Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Auth SDKs -->
+    <script src="https://unpkg.com/amazon-cognito-identity-js@6.3.7/dist/amazon-cognito-identity.min.js"></script>
+    <script src="auth.js"></script>
+</head>
+<body class="dashboard-body">
+    <nav class="sidebar">
+        <div class="logo">CloudPortal</div>
+        <div class="nav-links">
+            <a href="#" class="active">Clients</a>
+            <a href="#" style="opacity: 0.5; cursor: not-allowed;">Tasks (Phase 6)</a>
+            <a href="#" style="opacity: 0.5; cursor: not-allowed;">Settings</a>
+        </div>
+        <div class="user-profile">
+            <span id="userEmail">Loading...</span>
+            <button id="logoutBtn" class="btn btn-secondary btn-sm" style="margin-top: 10px; width: 100%;">Log Out</button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="top-bar">
+            <h2>Clients</h2>
+            <button id="addClientBtn" class="btn btn-primary">+ Add Client</button>
+        </header>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Clients</h3>
+                <p class="stat-number" id="totalClients">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Active</h3>
+                <p class="stat-number" style="color: green;">0</p>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Company</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="clientsTableBody">
+                    <tr>
+                        <td colspan="5" style="text-align: center; color: var(--text-muted);">Loading clients...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Simple Modal -->
+    <div id="clientModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3>Add New Client</h3>
+            <form id="addClientForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="clientName" required>
+                </div>
+                <div class="form-group">
+                    <label>Company</label>
+                    <input type="text" id="clientCompany" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="clientEmail" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="document.getElementById('clientModal').style.display='none'">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Client</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

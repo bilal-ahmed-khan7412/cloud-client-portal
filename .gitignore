@@ -1,0 +1,16 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+node_modules/
+.env
+
+# Ignore build artifacts
+dist/
+build/
+__pycache__/
+
+# Ignore IDE/Agent files
+.vscode/
+.idea/
+.gemini/
+.agent/
