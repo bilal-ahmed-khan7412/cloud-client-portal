@@ -47,5 +47,12 @@
 - [ ] Automate SAM Deployment
 
 ## Phase 8: Documentation & Resume
-- [ ] Create Architecture Diagram
+- [ ] Create Arch Diagram
 - [ ] Write README.md
+
+## Phase 6 (New): Automate Deployment (CI/CD)
+- [x] Initialize Local Git Repo
+- [x] Create GitHub Actions Workflow
+- [ ] Create GitHub Repository
+- [ ] Push Code to GitHub
+- [ ] Configure GitHub Secrets (AWS Keys)
